@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BDD3A9B1DDC90B5002B47A7 /* OpenEmuXPCCommunicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BDD3A9A1DDC90B5002B47A7 /* OpenEmuXPCCommunicator.framework */; };
 		6BF9A7CE1DDBBF3A00F66BDA /* XPCMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF9A7C41DDBBF3A00F66BDA /* XPCMessaging.framework */; };
 		6BF9A7D31DDBBF3A00F66BDA /* XPCMessagingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF9A7D21DDBBF3A00F66BDA /* XPCMessagingTests.swift */; };
 		6BF9A7D51DDBBF3A00F66BDA /* XPCMessaging.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BF9A7C71DDBBF3A00F66BDA /* XPCMessaging.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6BDD3A9A1DDC90B5002B47A7 /* OpenEmuXPCCommunicator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenEmuXPCCommunicator.framework; path = Carthage/Build/Mac/OpenEmuXPCCommunicator.framework; sourceTree = "<group>"; };
 		6BF9A7C41DDBBF3A00F66BDA /* XPCMessaging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XPCMessaging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF9A7C71DDBBF3A00F66BDA /* XPCMessaging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPCMessaging.h; sourceTree = "<group>"; };
 		6BF9A7C81DDBBF3A00F66BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BDD3A9B1DDC90B5002B47A7 /* OpenEmuXPCCommunicator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +56,7 @@
 		6BF9A7BA1DDBBF3A00F66BDA = {
 			isa = PBXGroup;
 			children = (
+				6BF9A7E21DDC8F2400F66BDA /* Frameworks */,
 				6BF9A7C61DDBBF3A00F66BDA /* XPCMessaging */,
 				6BF9A7D11DDBBF3A00F66BDA /* XPCMessagingTests */,
 				6BF9A7C51DDBBF3A00F66BDA /* Products */,
@@ -84,6 +88,14 @@
 				6BF9A7D41DDBBF3A00F66BDA /* Info.plist */,
 			);
 			path = XPCMessagingTests;
+			sourceTree = "<group>";
+		};
+		6BF9A7E21DDC8F2400F66BDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BDD3A9A1DDC90B5002B47A7 /* OpenEmuXPCCommunicator.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +160,7 @@
 				TargetAttributes = {
 					6BF9A7C31DDBBF3A00F66BDA = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					6BF9A7CC1DDBBF3A00F66BDA = {
@@ -317,12 +330,17 @@
 		6BF9A7D91DDBBF3A00F66BDA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = XPCMessaging/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -330,6 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.arkdan.XPCMessaging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -337,12 +356,17 @@
 		6BF9A7DA1DDBBF3A00F66BDA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = XPCMessaging/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -357,6 +381,7 @@
 		6BF9A7DC1DDBBF3A00F66BDA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = XPCMessagingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -369,6 +394,7 @@
 		6BF9A7DD1DDBBF3A00F66BDA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = XPCMessagingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -397,6 +423,7 @@
 				6BF9A7DA1DDBBF3A00F66BDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6BF9A7DB1DDBBF3A00F66BDA /* Build configuration list for PBXNativeTarget "XPCMessagingTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +432,7 @@
 				6BF9A7DD1DDBBF3A00F66BDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,6 @@
+framework module OpenEmuXPCCommunicator {
+  umbrella header "OpenEmuXPCCommunicator.h"
+
+  export *
+  module * { export * }
+}
