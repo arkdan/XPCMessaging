@@ -11,6 +11,8 @@
 		6BF9A7CE1DDBBF3A00F66BDA /* XPCMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF9A7C41DDBBF3A00F66BDA /* XPCMessaging.framework */; };
 		6BF9A7D31DDBBF3A00F66BDA /* XPCMessagingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF9A7D21DDBBF3A00F66BDA /* XPCMessagingTests.swift */; };
 		6BF9A7D51DDBBF3A00F66BDA /* XPCMessaging.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BF9A7C71DDBBF3A00F66BDA /* XPCMessaging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BF9A7E01DDC8EE900F66BDA /* RemoteEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF9A7DE1DDC8EE900F66BDA /* RemoteEnd.swift */; };
+		6BF9A7E11DDC8EE900F66BDA /* LocalEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF9A7DF1DDC8EE900F66BDA /* LocalEnd.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +33,8 @@
 		6BF9A7CD1DDBBF3A00F66BDA /* XPCMessagingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XPCMessagingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF9A7D21DDBBF3A00F66BDA /* XPCMessagingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCMessagingTests.swift; sourceTree = "<group>"; };
 		6BF9A7D41DDBBF3A00F66BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BF9A7DE1DDC8EE900F66BDA /* RemoteEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteEnd.swift; sourceTree = "<group>"; };
+		6BF9A7DF1DDC8EE900F66BDA /* LocalEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalEnd.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 		6BF9A7C61DDBBF3A00F66BDA /* XPCMessaging */ = {
 			isa = PBXGroup;
 			children = (
+				6BF9A7DE1DDC8EE900F66BDA /* RemoteEnd.swift */,
+				6BF9A7DF1DDC8EE900F66BDA /* LocalEnd.swift */,
 				6BF9A7C71DDBBF3A00F66BDA /* XPCMessaging.h */,
 				6BF9A7C81DDBBF3A00F66BDA /* Info.plist */,
 			);
@@ -209,6 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BF9A7E01DDC8EE900F66BDA /* RemoteEnd.swift in Sources */,
+				6BF9A7E11DDC8EE900F66BDA /* LocalEnd.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
