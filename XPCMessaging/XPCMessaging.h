@@ -6,7 +6,7 @@
 //  Copyright © 2016 arkdan. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for XPCMessaging.
 FOUNDATION_EXPORT double XPCMessagingVersionNumber;
